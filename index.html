@@ -1,40 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
     <title>User Management</title>
-
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<h1>User Details</h1>
+<div class="container">
 
-<button onclick="loadUsers()">Load Users</button>
+    <h1>👥 User Management Dashboard</h1>
 
-<table id="userTable">
+    <div class="controls">
+        <button onclick="loadUsers()">🔄 Load Users</button>
+        <input type="text" id="searchInput" placeholder="Search by name or email..." onkeyup="filterUsers()">
+    </div>
 
-    <thead>
+    <div id="status"></div>
 
-        <tr>
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
 
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
+        <tbody></tbody>
+    </table>
 
-        </tr>
-
-    </thead>
-
-    <tbody>
-
-    </tbody>
-
-</table>
+</div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
